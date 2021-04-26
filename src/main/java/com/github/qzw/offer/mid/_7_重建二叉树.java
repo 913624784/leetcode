@@ -1,4 +1,4 @@
-package com.github.qzw.offer;
+package com.github.qzw.offer.mid;
 
 import com.github.qzw.TreeNode;
 
@@ -10,7 +10,7 @@ import java.util.Map;
  * @date : 2021/4/16
  * @Description : https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/
  */
-public class O_7_重建二叉树 {
+public class _7_重建二叉树 {
     private static Map<Integer, Integer> indexMap;
 
     /**

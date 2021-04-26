@@ -1,11 +1,11 @@
-package com.github.qzw.offer;
+package com.github.qzw.offer.easy;
 
 /**
  * @author : qizhiwei
  * @date : 2021/4/16
  * @Description : https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/
  */
-public class O_5_替换空格 {
+public class _5_替换空格 {
 
     /**
      * 时间复杂度 O(n)

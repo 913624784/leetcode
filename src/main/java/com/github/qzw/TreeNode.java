@@ -8,9 +8,12 @@ package com.github.qzw;
 public class TreeNode {
     public TreeNode left;
     public TreeNode right;
-    public int val;
+    public String val;
 
     public TreeNode(int val) {
+        this.val = String.valueOf(val);
+    }
+    TreeNode(String val) {
         this.val = val;
     }
 

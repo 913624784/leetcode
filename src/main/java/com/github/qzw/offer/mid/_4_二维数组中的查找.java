@@ -1,11 +1,11 @@
-package com.github.qzw.offer;
+package com.github.qzw.offer.mid;
 
 /**
  * @author : qizhiwei
  * @date : 2021/4/16
  * @Description : https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/
  */
-public class O_4_二维数组中的查找 {
+public class _4_二维数组中的查找 {
     /**
      * 时间复杂度 O(m+n)
      * 空间复杂度 O(1)

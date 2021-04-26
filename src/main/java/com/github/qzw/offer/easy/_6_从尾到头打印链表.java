@@ -1,4 +1,4 @@
-package com.github.qzw.offer;
+package com.github.qzw.offer.easy;
 
 import com.github.qzw.ListNode;
 
@@ -10,7 +10,7 @@ import java.util.Stack;
  * @date : 2021/4/16
  * @Description : https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/
  */
-public class O_6_从尾到头打印链表 {
+public class _6_从尾到头打印链表 {
 
     /**
      * 时间复杂度 O(n)

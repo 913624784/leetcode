@@ -1,4 +1,4 @@
-package com.github.qzw.offer;
+package com.github.qzw.offer.easy;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -8,7 +8,7 @@ import java.util.Set;
  * @date : 2021/4/16
  * @Description : https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/
  */
-public class O_3_数组中的重复数字 {
+public class _3_数组中的重复数字 {
 
     /**
      * 时间空间复杂度都为 O(n)
