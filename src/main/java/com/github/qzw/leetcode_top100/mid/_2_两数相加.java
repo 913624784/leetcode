@@ -24,6 +24,7 @@ public class _2_两数相加 {
             //如果加和大于 10 正常返回，否则为 0 代表小于 10
             int sum = carry + x + y;
             System.out.println(i + " -> x:" + x + " y:" + y + " sum:" + sum);
+            // 进位值
             carry = sum / 10;
             //curr 为头结点为 0 的初始链表
             //input

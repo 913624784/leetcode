@@ -16,7 +16,7 @@ public class _1_两数之和 {
      * 空间复杂度 O(n)
      */
     public static int[] twoSum(int[] nums, int target) {
-        Map<Integer, Integer> map = new HashMap();
+        HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int temp = target - nums[i];
             if (map.containsKey(temp)) {
