@@ -26,19 +26,19 @@ public class _1_硬币找零 {
      * 自底向上算每个面额的最优解
      * 复杂度O(M*n)
      *
-     * @param k      总额
-     * @param values 面值列表
+     * @param total 总额
+     * @param coins 面值列表
      * @return 最小组合
      */
-    static int getMinCounts(int k, int[] values) {
-        int[] memo = new int[k + 1]; // 创建备忘录
+    static int getMinCounts(int total, int[] coins) {
+        int[] memo = new int[total + 1]; // 创建备忘录
         memo[0] = 0; // 初始化状态
-        for (int i = 1; i < k + 1; i++) {
-            memo[i] = k + 1;
+        for (int i = 1; i < total + 1; i++) {
+            memo[i] = total + 1;
         }
 
-        for (int i = 1; i < k + 1; i++) {
-            for (int coin : values) {
+        for (int i = 1; i < total + 1; i++) {
+            for (int coin : coins) {
                 // 判断当前面额总值是否小于当前硬币面额。如果是，则说明组合不存在，直接进入下一轮循环
                 if (i - coin < 0) {
                     continue;
@@ -54,12 +54,12 @@ public class _1_硬币找零 {
         // a. 如果是 k + 1，就意味着在初始化状态时的值没有被更新过，是“正无穷大”。这时按照题目要求，返回 -1
         // b. 否则，我们就找到了最少凑出硬币的数量，返回它，就是我们的答案
         System.out.println(Arrays.toString(Arrays.stream(memo).toArray()));
-        return memo[k] == k + 1 ? -1 : memo[k];
+        return memo[total] == total + 1 ? -1 : memo[total];
     }
 
     public static void main(String[] args) {
-        int[] values = {5, 3}; // 硬币面值
+        int[] coins = {5, 3}; // 硬币面值
         int total = 11; // 总价
-        System.out.println(getMinCounts(total, values));
+        System.out.println(getMinCounts(total, coins));
     }
 }

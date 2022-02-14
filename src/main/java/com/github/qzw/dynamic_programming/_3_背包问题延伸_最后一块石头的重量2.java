@@ -35,21 +35,21 @@ public class _3_背包问题延伸_最后一块石头的重量2 {
          * tn: traversed n，即已经遍历过的石头
          * rw: reserved w，即背包还能容量的重量
          */
-        for (int tn = 1; tn < n + 1; tn++) {
+        for (int tn = 1; tn < n; tn++) {
             for (int rw = 1; rw < sum / 2 + 1; rw++) {
-                if (rw < stones[tn - 1]) {
+                if (rw < stones[tn]) {
                     //这块石头放不进背包时，只能跳过
                     dp[tn][rw] = dp[tn - 1][rw];
                 } else {
                     //当我能把这块石头放进背包时，我会比较放或不放，选择最大值
-                    dp[tn][rw] = Math.max(dp[tn - 1][rw], dp[tn - 1][rw - stones[tn - 1]] + stones[tn - 1]);
+                    dp[tn][rw] = Math.max(dp[tn - 1][rw], dp[tn - 1][rw - stones[tn]] + stones[tn]);
                 }
             }
         }
         for (int[] x : dp) {
             System.out.println(Arrays.toString(Arrays.stream(x).toArray()));
         }
-        return sum - dp[n][sum / 2] * 2;
+        return sum - dp[n - 1][sum / 2] * 2;
     }
 
     public static void main(String[] args) {
