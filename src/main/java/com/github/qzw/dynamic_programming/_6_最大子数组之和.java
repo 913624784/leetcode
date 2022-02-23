@@ -18,6 +18,7 @@ public class _6_最大子数组之和 {
 
     /**
      * 方案一
+     * DP[i] 表示的是以 i 为结束位置的最大子数组之和
      */
     static int maxSubArray1(int[] nums) {
         int n = nums.length;
@@ -40,6 +41,7 @@ public class _6_最大子数组之和 {
 
     /**
      * 方案二 空间复杂度优化
+     * 无需使用n长的数组，而是用两个变量就够了
      */
     static int maxSubArray2(int[] nums) {
         int n = nums.length;

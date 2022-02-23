@@ -24,6 +24,9 @@ public class _5_子数组_回文子串个数 {
 
     /**
      * DP[i][j] 所对应的值是子串 i…j 是否为回文（True 或 False）
+     * i是子串开始位置 j是子串结束位置
+     * 时间复杂度为O(N^2)
+     * 空间复杂度为O(N^2)
      *
      * @param s 输入字符串
      * @return 回文串数量
@@ -34,14 +37,22 @@ public class _5_子数组_回文子串个数 {
             return 0;
         }
 
+        // 计数器，如果是回文串就加1
         int ans = 0;
         boolean[][] dp = new boolean[n][n];
-
+        /**
+         * 单个字符一定为回文，所以为True
+         */
         for (int i = 0; i < n; i++) {
             dp[i][i] = true;
             ans++;
         }
 
+        /**
+         * 当子问题局限于单字符时，它一定是回文（如 “a”），因此子问题的答案是 True
+         * 当子问题是由相同的两个字符构成的，它一定是回文（如 “aa”），因此子问题的答案是 True
+         * 当子问题是由左右两个相同字符外加一个任意字符，共三个字符构成时，它一定是回文（如 “aba”），因此子问题的答案是 True
+         */
         for (int j = 1; j < n; j++) {
             for (int i = 0; i < j; i++) {
                 dp[i][j] = (s.charAt(i) == s.charAt(j)) && (j - i < 3 || dp[i + 1][j - 1]);
