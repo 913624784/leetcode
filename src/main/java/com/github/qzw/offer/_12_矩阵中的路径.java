@@ -1,4 +1,4 @@
-package com.github.qzw.offer.mid;
+package com.github.qzw.offer;
 
 /**
  * @author : qizhiwei

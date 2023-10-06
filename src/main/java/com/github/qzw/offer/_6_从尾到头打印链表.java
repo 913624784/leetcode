@@ -1,4 +1,4 @@
-package com.github.qzw.offer.easy;
+package com.github.qzw.offer;
 
 import com.github.qzw.ListNode;
 

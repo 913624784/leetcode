@@ -1,4 +1,4 @@
-package com.github.qzw.offer.easy;
+package com.github.qzw.offer;
 
 import java.util.HashSet;
 import java.util.Set;

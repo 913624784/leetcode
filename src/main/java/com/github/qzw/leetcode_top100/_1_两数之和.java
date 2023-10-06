@@ -1,4 +1,4 @@
-package com.github.qzw.leetcode_top100.easy;
+package com.github.qzw.leetcode_top100;
 
 import java.util.Arrays;
 import java.util.HashMap;

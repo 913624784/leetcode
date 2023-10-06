@@ -1,4 +1,4 @@
-package com.github.qzw.leetcode_top100.mid;
+package com.github.qzw.leetcode_top100;
 
 import java.util.HashMap;
 
